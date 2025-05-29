@@ -9,19 +9,18 @@ from langchain.prompts import PromptTemplate
 
 # Carregar variáveis de ambiente
 load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 # Modelo
-model = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key=OPENAI_API_KEY)
+model = ChatOpenAI(model_name='gpt-3.5-turbo', openai_api_key=OPENAI_API_KEY)
 
 # Ferramenta REPL
 python_repl = PythonREPL()
 python_repl_tool = Tool(
-    name="Python REPL",
+    name='Python REPL',
     description='Um Shell Python, use isso para executar códigos Python, execute apenas codigos Python válidos, Se necessário obter um retorno, use a função "print(...)"',
-    func=python_repl.run
+    func=python_repl.run,
 )
-
 
 
 # Criar um Agente
@@ -36,9 +35,9 @@ agent_executor = create_python_agent(
 # Prompt
 prompt_template = PromptTemplate(
     input_variables=['query'],
-    template='''
+    template="""
     Resolva o calculo {query} 
-    '''
+    """,
 )
 
 query = 'Calcule uma comissão de 15 porcento sobre o valor de imposto de 18 porcento de R$ 1000'
