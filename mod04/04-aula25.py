@@ -67,7 +67,7 @@ agent_executor = AgentExecutor(
 
 question = '''
 Minha renda é de R$4500,00 por mês, somando despeas fixas no valor de R$1500,00 e variáveis de R$2900,00.
-Quais dicas você me daria para instir a diferença e ter uma reserva de emergência?
+Quais dicas você me daria para investir a diferença e ter uma reserva de emergência?
 '''
 
 output = agent_executor.invoke(

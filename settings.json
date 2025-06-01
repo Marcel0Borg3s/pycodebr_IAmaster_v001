@@ -1,0 +1,38 @@
+{
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword",
+        "settings": {
+          "foreground": "#82AAFF"
+        }
+      },
+      {
+        "scope": "variable",
+        "settings": {
+          "foreground": "#C792EA"
+        }
+      },
+      {
+        "scope": "string",
+        "settings": {
+          "foreground": "#e7c463"
+        }
+      },
+      {
+        "scope": "comment",
+        "settings": {
+          "foreground": "#5C6370",
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "workbench.colorCustomizations": {
+    "editor.background": "#121212"
+},
+"workbench.colorTheme": "Default Dark+",
+"window.openFoldersInNewWindow": "off"
+}
+
+
