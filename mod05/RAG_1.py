@@ -55,9 +55,12 @@ rag_chain = (
 )
 
 
+try:
+    while True:
+        question = input('Qual é a sua dúvida? ')
+        response = rag_chain.invoke(question)
+        print(response)
 
-question = 'como restaurar o computador?'
-
-response = rag_chain.invoke(question)
-print(response)
+except KeyboardInterrupt:
+    exit()
 
